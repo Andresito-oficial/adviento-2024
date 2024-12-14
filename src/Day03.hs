@@ -22,7 +22,7 @@ process (x:xs) enabled ac = case x of
 
 day03 :: IO ()
 day03 = do
-  inputLines <- getDataFileName "day03-input.txt" >>= readFile
+  inputLines <- getDataFileName "Dia3.txt" >>= readFile
   let matches = inputLines =~ pattern :: [[String]]                               -- matches = [["mul(2,4)","2","4"],["mul(5,5)","5","5"],["mul(11,8)","11","8"],["mul(8,5)","8","5"]]
       total = process matches True 0
   print total
